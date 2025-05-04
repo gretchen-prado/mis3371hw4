@@ -1,0 +1,82 @@
+  /*
+Program name: index-4.html this is styles-4.css
+Author: Gretchen R Prado Gonzalez
+Date created: February 5
+Date last edited: May 2
+Version: 4.0
+Description: CSS of the patient registration form.*/
+
+        body {
+    background-image: url("bg3.png");
+    background-size: auto;
+    height: 100;
+    background-repeat:inherit
+        }
+       
+        h1 {
+    text-align: center;
+    font-family: Arial, Helvetica sans-serif;
+    font-weight: normal;
+    font-weight: bold;
+    font-size: 45px;
+    border: 1px;
+    border-radius: 20px;
+    background-color: rgba(119, 225, 218, 0.649);
+    padding-top: 0px;
+    padding-bottom: 0px;
+        }
+
+        form {
+    text-align: center;
+    font-family: Arial, Helvetica sans-serif;
+    font-size: 20px;
+    border: 1px;
+    border-radius: 50px;
+    background-color: rgb(129, 200, 195);
+    padding-top: 40px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    }
+
+    input[type="submit"] {
+    background-color: rgb(255	230	204);
+    }
+    input[type="reset"] {
+    background-color: rgb(245,245,245);
+    }
+    ::-webkit-slider-runnable-track {
+        background:rgb(255, 255, 234)
+    }
+
+    table {
+        font-family:copperplate;
+        background-color: rgb(129, 200, 195);
+        border-style: solid;
+    }
+
+    footer {
+        color:rgb(0, 0, 0);
+        background-color: rgb(129, 200, 195);
+    }
+
+    #valid:before
+    {
+        text-align: right;
+        color: green
+    }
+    #invalid:before {
+        text-align: right;
+    }   
+    #error {
+        text-align: right;
+        font-size: 10px;
+    }
+    .error-message {
+        color: red;
+        font-size: 0.9em;
+        display: block;}
+    .stickyheader {
+        position: sticky; /*sticky header*/
+        top: 0;
+    }

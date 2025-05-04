@@ -1,0 +1,362 @@
+<!doctype html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+<!--
+Program name: index-4.html
+Author: Gretchen R Prado Gonzalez
+Date created: February 5
+Date last edited: May 3
+Version: 4.0
+Description: A patient registration form in HTML.-->
+
+        <title>Patient Registration Form</title>
+
+         <!--Load external CSS styles-->
+        <link rel="stylesheet" href="styles-4.css">
+
+    </head>
+<div class="stickyheader">
+<table width="100%">
+    <tr>
+        <td><img src="pradologo3.png" width="100"></td>
+        <td>PRADO <br>Family Clinic</td>
+           <td>Today is: <p id="datetoday"></p></td> 
+        </td>
+    </tr>
+</table>
+
+</div>
+    <body onload="checkCookie()">
+     
+<!--Iframe-->
+    <iframe src="https://www.cdc.gov/nutrition/features/healthy-eating-tips.html" height="200" width="100%"  title="Healthy Eating Tips"></iframe>
+       
+    <h1>Patient Registration Form</h1>
+    <br><br>
+     <form id="myForm" action="submission.html">
+        <label for="fname">First Name</label>
+        <input type="text" 
+            id="fname" 
+            name="fname" 
+            minlength="2" maxlength="30" size="15" 
+            placeholder=John 
+            pattern="^[A-Za-z'-]"
+            required
+            onblur="getCookie()">
+           <label for="remember">(remember me)</label>
+        <input type="checkbox" name="remember" checked></input>
+           
+        &nbsp;&nbsp;&nbsp;
+       
+        <label for="minitial">MI</label>
+        <input type="text" 
+            id="mi" name="mi" 
+            minlength="0" maxlength="1" size="1"
+            placeholder="A" >
+            &nbsp;&nbsp;&nbsp;
+      
+        <label for="lname">Last name</label>
+        <input type="text" 
+            id="lname" 
+            name="lname" 
+            minlength="2" maxlength="30" size="15" 
+            pattern="^[A-Za-z'-]"
+            placeholder="Smith" required>
+    <p>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+     
+        <label for="birthday">DOB</label>
+        <input type="date" 
+            id="dob" 
+            name="dob" 
+            min="1905-12-31"
+            max="2025-04-13"
+            required>
+      
+        &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      
+        <label for="ssn">SSN</label>
+        <input type="password" 
+            id="ssn" 
+            type="number"
+            name="ssn" 
+            minlength="9" maxlength="11" size="12" 
+            placeholder="111-111-1111"
+            title="Only numbers"
+            required>
+    </p>
+    <p>
+       &nbsp; &nbsp; &nbsp;
+
+
+        <label for="address">Address 1</label>
+        <input type="text" 
+            id="add1" 
+            name="add1" 
+            maxlength="30" 
+            placeholder="123 Lane Ave" required>
+       
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+       
+       <label for="address">Address 2</label>
+        <input type="text" 
+            id="add2"
+            name="add2" 
+            maxlength="30" 
+            placeholder="123 Lane Ave">
+    </p>
+    <p>
+        <label for="city">City</label>
+        <input type="text" 
+            id="city" 
+            name="city" 
+            minlength="2"
+            maxlength="30" size="15" 
+            placeholder="Houston"
+            required>
+       
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+     
+       <label for="state">State</label> <!--I got it from this website: https://www.freeformatter.com/usa-state-list-html-select.html-->
+        <select>
+            <option value="select">Choose State</option>
+            <option value="AL">Alabama (AL)</option>
+            <option value="AK">Alaska (AK)</option>
+            <option value="AZ">Arizona (AZ)</option>
+            <option value="AR">Arkansas (AR)</option>
+            <option value="CA">California (CA)</option>
+            <option value="CO">Colorado (CO)</option>
+            <option value="CT">Connecticut (CT)</option>
+            <option value="DE">Delaware (DE)</option>
+            <option value="DC">District Of Columbia (DC)</option>
+            <option value="FL">Florida (FL)</option>
+            <option value="GA">Georgia (GA)</option>
+            <option value="HI">Hawaii (HI)</option>
+            <option value="ID">Idaho (ID)</option>
+            <option value="IL">Illinois (IL)</option>
+            <option value="IN">Indiana (IN)</option>
+            <option value="IA">Iowa (IA)</option>
+            <option value="KS">Kansas (KS)</option>
+            <option value="KY">Kentucky (KY)</option>
+            <option value="LA">Louisiana (LA)</option>
+            <option value="ME">Maine (ME)</option>
+            <option value="MD">Maryland (MD)</option>
+            <option value="MA">Massachusetts (MA)</option>
+            <option value="MI">Michigan (MI)</option>
+            <option value="MN">Minnesota (MN)</option>
+            <option value="MS">Mississippi (MS)</option>
+            <option value="MO">Missouri (MO)</option>
+            <option value="MT">Montana (MT)</option>
+            <option value="NE">Nebraska (NE)</option>
+            <option value="NV">Nevada (NV)</option>
+            <option value="NH">New Hampshire (NH)</option>
+            <option value="NJ">New Jersey (NJ)</option>
+            <option value="NM">New Mexico (NM)</option>
+            <option value="NY">New York (NY)</option>
+            <option value="NC">North Carolina (NC)</option>
+            <option value="ND">North Dakota (ND)</option>
+            <option value="OH">Ohio (OH)</option>
+            <option value="OK">Oklahoma (OK)</option>
+            <option value="OR">Oregon (OR)</option>
+            <option value="PA">Pennsylvania (PA)</option>
+            <option value="RI">Rhode Island (RI)</option>
+            <option value="SC">South Carolina (SC)</option>
+            <option value="SD">South Dakota (SD)</option>
+            <option value="TN">Tennessee (TN)</option>
+            <option value="TX">Texas (TX)</option>
+            <option value="UT">Utah (UT)</option>
+            <option value="VT">Vermont (VT)</option>
+            <option value="VA">Virginia (VA)</option>
+            <option value="WA">Washington (WA)</option>
+            <option value="WV">West Virginia (WV)</option>
+            <option value="WI">Wisconsin (WI)</option>
+            <option value="WY">Wyoming (WY)</option>
+            <option value="PR">Puerto Rico (PR)</option>
+        </select>
+       
+     &nbsp; &nbsp; &nbsp; 
+     <label for="zip">Zip Code</label>
+        <input type="text" 
+        minlength="5" maxlength="10" size="5" 
+        placeholder="77000"
+        title="Numbers only">
+    </p>
+    <p>
+        &nbsp;
+        <span id="emailError" class="error-message"></span>
+        <label for="emial">Email</label>
+        <input type="email" name="email" placeholder="john@gmail.com"
+        pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+        oninput="validateEmail()"
+        required>
+        
+       
+        &nbsp;&nbsp;&nbsp;&nbsp;
+
+        <label id="gender">Gender</label>
+             <input type="radio" id="female" name="gender" value="Female">
+             <label for="fem">Female</label>
+             <input type="radio" id="male" name="gender" value="male">
+             <label for="css">Male</label>
+    </p>
+    <label id="status">Marital Status</label>
+        <input type="radio" id="single" name="status" value="Single">
+        <label for="fem">Single</label>
+        <input type="radio" id="married" name="status" value="Married">
+        <label for="css">Married</label>
+        <input type="radio" id="divorced" name="status" value="Divorced">
+        <label for="fem">Divorced</label>
+        <input type="radio" id="widow" name="status" value="Widowed">
+        <label for="css">Widowed</label>
+    
+    <br> <br> <br>
+   
+    <label for="medication">Please list any current medications you are taking</label><br>
+    <textarea name="message" rows="3" cols="50">
+        </textarea>
+   
+    <br><br><br>
+    
+    <label id="lang">Preferred Language</label>
+            <input type="radio" 
+            id="eng" 
+            name="lang" 
+            value="English">
+            <label for="eng">English</label>
+
+        <input type="radio" 
+            id="esp" 
+            name="lang" 
+            value="Español">
+            <label for="css">Español</label>
+
+        <input type="radio" 
+            id="viet" 
+            name="lang"
+            value="Tiếng Việt">
+            <label for="fem">Tiếng Việt</label>
+
+        <input type="radio" 
+            id="fr"
+            name="lang" 
+            value="Français">
+            <label for="css">Français</label>
+
+<br> <br> <br>
+    <label for="username">Create User ID</label>
+            <input type="text" 
+            id="username" 
+            name="username"
+            maxlength="20"
+            minlength="5"
+            placeholder="Ex: JohnSmith"
+            title="Must be different from email"
+            required
+            pattern="(^?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}">
+
+<p>
+    <label for="pwd">Password</label>
+            <input type="password" 
+            id="pwd" 
+            name="pwd"
+            pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}"
+            title="At least 1 upper and lower case, 1 number & 1 special character"
+            required
+            oninput="validatePassword()">
+
+</p>
+
+<!--error messages for password-->
+<tr>
+<div id="error"> <!--w3schools-->
+    <p id="lower" class="invalid">You need a lowercase letter</p>
+    <p id="upper" class="invalid">You need an uppercase letter</p>
+    <p id="number" class="invalid">Add a number</b></p>
+    <p id="length" class="invalid">Must be 8 characters or more</p>
+  </div>
+</tr>
+  <label for="psw-repeat">Confirm Password</label>
+            <input type="password" 
+            placeholder="Re-enter Password" 
+            name="psw-repeat" 
+            id="psw-repeat" 
+            required>
+            <p id="message"></p>
+<br><br>
+<p>
+  <label for="vol">How often do you go for a checkup in a year? (between 0 and 4+):</label>
+            <input type="range" 
+            id="vol" name="vol" 
+            min="0" max="4">
+            <span id="rangeValue">2</span>
+            <br><br>
+</p>
+    <label for="survey">How did you hear about us?</label><br>
+            <input type="checkbox" 
+            id="fam" 
+            name="fam" 
+            value="Family/Friends">
+            <label for="fam">Family/Friends</label><br>
+
+            <input type="checkbox" 
+            id="prov" 
+            name="prov" 
+            value="Care providers">
+            <label for="prov">Care providers</label><br>
+       
+            <input type="checkbox" 
+            id="socials" 
+            name="social" 
+            value="social media">
+            <label for="Social media"> Social media</label><br>
+
+       &nbsp;
+            <input type="checkbox" 
+            id="walk" 
+            name="walk" 
+            value="walking by">
+            <label for="Walking"> Walking by</label><br>
+
+            <input type="checkbox" 
+            id="other" 
+            name="other" 
+            value="other">
+            <label for="other"> Other</label>
+
+        <p> <br>   <!-- Reset & Review buttons -->
+            <pre>
+    <input type="reset" title="Clears all data" value="Restart Form">            <input type="button" value="Review Form" onclick="reviewForm()">
+    <!--<form action="submission.html"> <input type="button" value="Review Form"> </form>-->
+            </pre>
+          
+
+        </p>
+     </form>
+<br>
+
+<div id="reviewArea"></div>
+        
+<button type="submit" id="confirmSubmit" disabled>Confirm & Submit</button>
+
+   <!-- Footer-->
+     <footer>
+        <table width="100%">
+        <tr>
+            <td>Visit Us</td>
+            <td><a href="https://www.w3schools.com">Contact Us</a></td>
+            <td><img src="pradologo3.png" width="50"></td>
+        </tr>
+        <tr>
+            <td>Houston, Texas</td>
+        </tr>
+        </table>
+    </footer>
+
+<!-- Load external JavaScript-->
+<script src="scripts-4.js"></script>
+
+    </body>
+</html>
